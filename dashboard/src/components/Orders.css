@@ -1,0 +1,154 @@
+/* ===========================================
+   STOCKPILOT ORDERS
+=========================================== */
+
+.order-table {
+  width: 100%;
+  margin-top: 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   TABLE
+================================ */
+
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table thead {
+  background: #f8fafc;
+}
+
+.order-table th {
+  text-align: left;
+  padding: 18px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.order-table td {
+  padding: 18px 22px;
+  font-size: 14px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.order-table tbody tr {
+  transition: all .25s ease;
+}
+
+.order-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* ===============================
+   PROFIT & LOSS
+================================ */
+
+.profit {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.loss {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ===============================
+   TYPE BADGES
+================================ */
+
+.order-table td:last-child {
+  font-weight: 600;
+}
+
+.order-table td:last-child.profit {
+  color: #16a34a;
+}
+
+.order-table td:last-child.loss {
+  color: #dc2626;
+}
+
+/* ===============================
+   FIRST COLUMN
+================================ */
+
+.order-table td:first-child {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ===============================
+   PRICE COLUMN
+================================ */
+
+.order-table td:nth-child(3) {
+  font-weight: 600;
+}
+
+/* ===============================
+   SCROLL
+================================ */
+
+.order-table {
+  overflow-x: auto;
+}
+
+.order-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.order-table::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.order-table::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:992px) {
+
+  .order-table th,
+  .order-table td {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .order-table {
+    border-radius: 12px;
+  }
+
+  .order-table table {
+    min-width: 650px;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .order-table th,
+  .order-table td {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+}

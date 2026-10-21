@@ -1,0 +1,490 @@
+/* ======================================================
+   StockPilot - Global & Theme Styles (Light & Dark Mode)
+====================================================== */
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Theme Variables (Default) */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #6366f1;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  --text-dark: #0f172a;
+  --text: #334155;
+  --text-light: #64748b;
+
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --topbar-bg: #ffffff;
+  --input-bg: #f1f5f9;
+  --table-head-bg: #f8fafc;
+  --table-row-hover: #f8fbff;
+  --white: #ffffff;
+
+  --shadow-sm: 0 3px 10px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 30px rgba(15, 23, 42, 0.08);
+
+  --radius: 18px;
+  --transition: all 0.25s ease;
+}
+
+/* Dark Theme Variables */
+body.dark-theme,
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #818cf8;
+
+  --text-dark: #f8fafc;
+  --text: #cbd5e1;
+  --text-light: #94a3b8;
+
+  --border: #334155;
+  --border-light: #1e293b;
+  --bg: #0b1120;
+  --card-bg: #1e293b;
+  --topbar-bg: #0f172a;
+  --input-bg: #111827;
+  --table-head-bg: #111827;
+  --table-row-hover: #1e293b;
+  --white: #1e293b;
+
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Root */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Buttons */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Utility Classes */
+.profit {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.loss {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+/* ======================================================
+   DARK MODE COMPONENT OVERRIDES
+====================================================== */
+
+body.dark-theme .dashboard-layout,
+body.dark-theme .dashboard-body,
+body.dark-theme .summary-page,
+body.dark-theme .holdings-page {
+  background: var(--bg) !important;
+  color: var(--text-dark);
+}
+
+/* TopBar in Dark Mode */
+body.dark-theme .topbar {
+  background: var(--topbar-bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .topbar-left h2 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .topbar-left p {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .search-box {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .search-box:focus-within {
+  border-color: var(--primary) !important;
+  background: #0f172a !important;
+}
+
+body.dark-theme .search-input {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .search-input input {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .date-box {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .theme-btn,
+body.dark-theme .topbar-right .MuiIconButton-root {
+  background: var(--card-bg) !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .theme-btn:hover,
+body.dark-theme .topbar-right .MuiIconButton-root:hover {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .topbar-logout-btn {
+  background: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  color: #f87171 !important;
+}
+
+body.dark-theme .topbar-logout-btn:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* Summary Cards & Charts in Dark Mode */
+body.dark-theme .summary-header h1 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .summary-header p {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .summary-card,
+body.dark-theme .chart-card,
+body.dark-theme .market-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+body.dark-theme .summary-card h2,
+body.dark-theme .chart-card h3,
+body.dark-theme .market-card h3 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .summary-card h4,
+body.dark-theme .summary-card span {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .market-item {
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* Holdings Page in Dark Mode */
+body.dark-theme .holdings-header h4,
+body.dark-theme .holdings-header .MuiTypography-h4 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .holdings-header p {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .holding-search .MuiOutlinedInput-root {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .holding-search input {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .holdings-table {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .holdings-table .MuiTableHead-root {
+  background: var(--table-head-bg) !important;
+}
+
+body.dark-theme .holdings-table .MuiTableHead-root .MuiTableCell-root {
+  color: var(--text-light) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .holdings-table .MuiTableBody-root .MuiTableCell-root {
+  color: var(--text-dark) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .holdings-table .MuiTableBody-root .MuiTableRow-root:hover {
+  background: rgba(37, 99, 235, 0.08) !important;
+}
+
+body.dark-theme .company-cell .MuiTypography-subtitle2 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .company-cell .MuiTypography-caption {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .graph-card,
+body.dark-theme .portfolio-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .graph-card .MuiTypography-root,
+body.dark-theme .portfolio-card .MuiTypography-root {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .summary-row {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .summary-row span {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .summary-row strong {
+  color: var(--text-dark) !important;
+}
+
+/* Orders Page in Dark Mode */
+body.dark-theme .order-table {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .order-table thead {
+  background: var(--table-head-bg) !important;
+}
+
+body.dark-theme .order-table th {
+  color: var(--text-light) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .order-table td {
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .order-table td:first-child {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .order-table tbody tr:hover {
+  background: rgba(37, 99, 235, 0.08) !important;
+}
+
+body.dark-theme .title {
+  color: var(--text-dark) !important;
+}
+
+/* Watchlist in Dark Mode */
+body.dark-theme .watchlist-container {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-dark);
+}
+
+body.dark-theme .watchlist-container .search-container {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .watchlist-container .search {
+  background: var(--input-bg) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .watchlist-container .counts {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .watchlist-container .item p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .watchlist-container li {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+body.dark-theme .watchlist-container li:hover {
+  background: rgba(37, 99, 235, 0.08) !important;
+}
+
+/* Funds in Dark Mode */
+body.dark-theme .funds,
+body.dark-theme .commodity {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-dark);
+}
+
+body.dark-theme .table .data {
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .table hr {
+  border-color: var(--border) !important;
+}
+
+/* Dialog in Dark Mode */
+body.dark-theme .MuiDialog-paper {
+  background: #1e293b !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .MuiDialogTitle-root {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .MuiDialogContent-root {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .trade-summary {
+  background: #0f172a !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+body.dark-theme .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border) !important;
+}
+
+body.dark-theme .MuiInputBase-input {
+  color: var(--text-dark) !important;
+}
+
+body.dark-theme .MuiInputLabel-root {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .MuiDivider-root {
+  border-color: var(--border) !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

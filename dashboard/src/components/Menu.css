@@ -1,0 +1,284 @@
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  padding: 24px 18px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(37,99,235,.35);
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-text span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.divider {
+  background: rgba(255,255,255,0.08) !important;
+  margin-bottom: 25px !important;
+}
+
+/* =========================
+   MENU
+========================= */
+.sidebar-menu{
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    margin-top:30px;
+
+    flex:0;
+
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 14px 18px;
+  border-radius: 14px;
+  transition: .3s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-link:hover {
+  background: rgba(255,255,255,.08);
+  color: white;
+  transform: translateX(6px);
+}
+
+.active-menu {
+  background: linear-gradient(135deg,#2563eb,#3b82f6);
+  color: white;
+  box-shadow: 0 8px 24px rgba(37,99,235,.35);
+}
+
+.theme-menu-link {
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.theme-menu-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transform: translateX(6px);
+}
+
+.logout-menu-link {
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  color: #f87171 !important;
+  font-family: inherit;
+}
+
+.logout-menu-link:hover {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #fca5a5 !important;
+  transform: translateX(6px);
+}
+
+.sidebar-logout-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.sidebar-logout-icon-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  transform: scale(1.1);
+}
+
+/* =========================
+   INSIGHT CARD
+========================= */
+
+.upgrade-card {
+  margin-top: 35px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.upgrade-card h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.upgrade-card p {
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.upgrade-card button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg,#2563eb,#3b82f6);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.upgrade-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,.35);
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-section {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-info span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.setting-icon {
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.setting-icon:hover {
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.15);
+  border-radius: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:1100px){
+
+.sidebar{
+    width:240px;
+}
+
+.logo-text h2{
+    font-size:18px;
+}
+
+.menu-link{
+    padding:12px;
+}
+
+}
+
+@media (max-width:900px){
+
+.sidebar{
+    width:100%;
+    min-height:auto;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.upgrade-card{
+    display:none;
+}
+
+.profile-section{
+    display:none;
+}
+
+}

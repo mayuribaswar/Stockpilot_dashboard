@@ -1,0 +1,624 @@
+/* ===========================================
+   STOCKPILOT HOLDINGS PAGE
+=========================================== */
+
+.holdings-page {
+  padding: 30px;
+  background: #f8fafc;
+  min-height: calc(100vh - 70px);
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.holdings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.holdings-header h4,
+.holdings-header .MuiTypography-h4 {
+  font-weight: 700;
+  color: #111827;
+}
+
+.holdings-header p,
+.holdings-header .MuiTypography-body1,
+.holdings-header .MuiTypography-body2 {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.holdings-header button {
+  background: #2563eb !important;
+  color: white !important;
+  border-radius: 12px !important;
+  text-transform: none !important;
+  padding: 10px 22px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.holdings-header button:hover {
+  background: #1d4ed8 !important;
+}
+
+/* ===========================================
+   SEARCH BAR
+=========================================== */
+
+.holding-search {
+  margin-bottom: 28px;
+}
+
+.holding-search .MuiOutlinedInput-root {
+  background: white;
+  border-radius: 14px;
+}
+
+.holding-search input {
+  padding: 14px;
+}
+
+.holding-search svg {
+  color: #64748b;
+}
+
+/* ===========================================
+   SUMMARY CARDS
+=========================================== */
+
+.summary-card {
+  border-radius: 18px !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+  border: 1px solid #edf2f7;
+  transition: .3s;
+  height: 100%;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.summary-card .MuiCardContent-root {
+  padding: 24px !important;
+}
+
+.summary-card svg {
+  font-size: 36px !important;
+  margin-bottom: 14px;
+  color: #2563eb;
+}
+
+.summary-card:nth-child(2) svg {
+  color: #16a34a;
+}
+
+.summary-card:nth-child(3) svg {
+  color: #f59e0b;
+}
+
+.summary-card:nth-child(4) svg {
+  color: #7c3aed;
+}
+
+.summary-card .MuiTypography-root {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-card h2 {
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.profit {
+  color: #16a34a !important;
+}
+
+.loss {
+  color: #dc2626 !important;
+}
+
+/* ===========================================
+   GRID SPACING
+=========================================== */
+
+.MuiGrid-container {
+  margin-bottom: 25px !important;
+}
+
+/* ===========================================
+   HOLDINGS TABLE
+=========================================== */
+
+.holdings-table {
+  margin-top: 30px;
+  border-radius: 18px !important;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05) !important;
+  background: #ffffff;
+}
+
+.holdings-table .MuiTable-root {
+  min-width: 1050px;
+}
+
+/* ===========================================
+   TABLE HEADER
+=========================================== */
+
+.holdings-table .MuiTableHead-root {
+  background: #f8fafc;
+}
+
+.holdings-table .MuiTableHead-root .MuiTableCell-root {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 16px;
+}
+
+/* ===========================================
+   TABLE BODY
+=========================================== */
+
+.holdings-table .MuiTableBody-root .MuiTableCell-root {
+  padding: 18px 16px;
+  font-size: 14px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.holdings-table .MuiTableBody-root .MuiTableRow-root {
+  transition: all .25s ease;
+}
+
+.holdings-table .MuiTableBody-root .MuiTableRow-root:hover {
+  background: #f8fbff;
+}
+
+/* ===========================================
+   COMPANY CELL
+=========================================== */
+
+.company-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.company-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.company-cell .MuiTypography-subtitle2 {
+  font-weight: 700;
+  color: #111827;
+}
+
+.company-cell .MuiTypography-caption {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ===========================================
+   PRICE COLUMNS
+=========================================== */
+
+.holdings-table td:nth-child(2),
+.holdings-table td:nth-child(3),
+.holdings-table td:nth-child(4),
+.holdings-table td:nth-child(5) {
+  font-weight: 600;
+}
+
+/* ===========================================
+   MUI CHIPS
+=========================================== */
+
+.MuiChip-root {
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.MuiChip-colorSuccess {
+  background: rgba(34,197,94,.12) !important;
+  color: #16a34a !important;
+}
+
+.MuiChip-colorError {
+  background: rgba(239,68,68,.12) !important;
+  color: #dc2626 !important;
+}
+
+.MuiChip-outlinedSuccess {
+  border-color: #16a34a !important;
+}
+
+.MuiChip-outlinedError {
+  border-color: #dc2626 !important;
+}
+
+/* ===========================================
+   CHIP ICONS
+=========================================== */
+
+.MuiChip-icon {
+  color: inherit !important;
+}
+
+/* ===========================================
+   TABLE SCROLLBAR
+=========================================== */
+
+.holdings-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.holdings-table::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.holdings-table::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+/* ===========================================
+   TABLE CONTAINER
+=========================================== */
+
+.MuiTableContainer-root {
+  overflow-x: auto;
+}
+
+/* ===========================================
+   TABLE HOVER EFFECT
+=========================================== */
+
+.holdings-table tbody tr:hover td {
+  transition: .25s;
+}
+
+.holdings-table tbody tr:hover .company-avatar {
+  transform: scale(1.08);
+  transition: .25s;
+}
+
+/* ===========================================
+   GRAPH SECTION
+=========================================== */
+
+.graph-card {
+  margin-top: 30px;
+  border-radius: 18px !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05) !important;
+  padding: 24px !important;
+  background: #ffffff;
+}
+
+.graph-card .MuiTypography-root {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* ===========================================
+   PORTFOLIO SUMMARY
+=========================================== */
+
+.portfolio-card {
+  margin-top: 30px;
+  border-radius: 18px !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05) !important;
+  padding: 24px !important;
+  background: #ffffff;
+  height: 100%;
+}
+
+.portfolio-card .MuiTypography-root {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-row strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ===========================================
+   PAPER COMPONENTS
+=========================================== */
+
+.MuiPaper-root {
+  transition: all .3s ease;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-3px);
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.MuiButton-contained {
+  text-transform: none !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================================
+   TEXTFIELD
+=========================================== */
+
+.MuiOutlinedInput-root {
+  transition: all .25s ease;
+}
+
+.MuiOutlinedInput-root:hover {
+  box-shadow: 0 0 0 3px rgba(37,99,235,.08);
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ===========================================
+   RESPONSIVE - LARGE
+=========================================== */
+
+@media (max-width:1200px){
+
+.graph-card,
+.portfolio-card{
+
+margin-top:20px;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - TABLET
+=========================================== */
+
+@media (max-width:992px){
+
+.holdings-page{
+
+padding:22px;
+
+}
+
+.holdings-header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+
+}
+
+.holdings-header button{
+
+width:100%;
+
+}
+
+.summary-card{
+
+height:100%;
+
+}
+
+.graph-card,
+.portfolio-card{
+
+padding:20px !important;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - MOBILE
+=========================================== */
+
+@media (max-width:768px){
+
+.holdings-page{
+
+padding:18px;
+
+}
+
+.holdings-header{
+
+margin-bottom:18px;
+
+}
+
+.holdings-header h4,
+.holdings-header .MuiTypography-h4{
+
+font-size:28px;
+
+}
+
+.summary-card .MuiCardContent-root{
+
+padding:18px !important;
+
+}
+
+.summary-card h2{
+
+font-size:24px;
+
+}
+
+.holdings-table{
+
+border-radius:14px !important;
+
+}
+
+.graph-card,
+.portfolio-card{
+
+padding:18px !important;
+
+}
+
+.summary-row{
+
+padding:13px 0;
+
+}
+
+}
+
+/* ===========================================
+   SMALL MOBILE
+=========================================== */
+
+@media (max-width:480px){
+
+.holdings-page{
+
+padding:15px;
+
+}
+
+.holdings-header h4,
+.holdings-header .MuiTypography-h4{
+
+font-size:24px;
+
+}
+
+.summary-card h2{
+
+font-size:20px;
+
+}
+
+.summary-card svg{
+
+font-size:30px !important;
+
+}
+
+.summary-row span{
+
+font-size:13px;
+
+}
+
+.summary-row strong{
+
+font-size:14px;
+
+}
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+.summary-card,
+.holdings-table,
+.graph-card,
+.portfolio-card{
+
+animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================================
+   UTILITIES
+=========================================== */
+
+.text-success{
+
+color:#16a34a;
+font-weight:600;
+
+}
+
+.text-danger{
+
+color:#dc2626;
+font-weight:600;
+
+}
+
+.text-primary{
+
+color:#2563eb;
+font-weight:600;
+
+}
+
+/* ===========================================
+   END OF FILE
+=========================================== */

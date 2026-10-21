@@ -1,0 +1,221 @@
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.topbar {
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ==========================================
+   LEFT
+========================================== */
+
+.topbar-left h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.topbar-left p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-box {
+  width: 420px;
+  height: 48px;
+  background: #f3f4f6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  transition: 0.3s ease;
+}
+
+.search-box:hover {
+  background: #eef2ff;
+}
+
+.search-box:focus-within {
+  background: #ffffff;
+  border: 2px solid #2563eb;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+}
+
+.search-icon {
+  color: #9ca3af;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 15px;
+  color: #111827;
+}
+
+.search-input input::placeholder {
+  color: #9ca3af;
+}
+
+/* ==========================================
+   RIGHT
+========================================== */
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ==========================================
+   DATE BOX
+========================================== */
+
+.date-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 10px 16px;
+  border-radius: 14px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.date-box svg {
+  color: #2563eb;
+}
+
+/* ==========================================
+   ICON BUTTONS
+========================================== */
+
+.theme-btn,
+.topbar-right .MuiIconButton-root {
+  width: 46px;
+  height: 46px;
+  background: #f8fafc !important;
+  transition: all 0.3s ease !important;
+}
+
+.theme-btn:hover,
+.topbar-right .MuiIconButton-root:hover {
+  background: #2563eb !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.topbar-right .MuiAvatar-root {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topbar-right .MuiAvatar-root:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ==========================================
+   LOGOUT BUTTON
+========================================== */
+
+.topbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border: 1px solid #fecaca !important;
+  border-radius: 12px;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.topbar-logout-btn:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
+  transform: translateY(-1px);
+}
+
+.topbar-logout-btn .logout-icon {
+  font-size: 18px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .search-box {
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .topbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+    order: 3;
+  }
+
+  .date-box {
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .topbar-left h2 {
+    font-size: 22px;
+  }
+
+  .topbar-left p {
+    display: none;
+  }
+
+  .topbar-right {
+    gap: 10px;
+  }
+
+  .theme-btn,
+  .topbar-right .MuiIconButton-root {
+    width: 42px;
+    height: 42px;
+  }
+
+}

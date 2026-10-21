@@ -1,0 +1,5 @@
+{
+  "name": "StockPilot",
+  "description": "Full-stack investment portfolio management and stock trading dashboard for tracking holdings, orders, positions, and performance analytics.",
+  "requestFramePermissions": []
+}

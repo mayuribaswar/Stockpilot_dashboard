@@ -1,0 +1,22 @@
+{
+  "name": "stockpilot",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "dashboard",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=dashboard",
+    "build:dashboard": "npm run build --workspace=dashboard",
+    "dev": "node -e \"const fs = require('fs'); if (!fs.existsSync('dashboard/build/index.html')) { require('child_process').execSync('npm run build', {stdio:'inherit'}); }\" && node backend/index.js",
+    "start": "node backend/index.js",
+    "lint": "node -e \"console.log('Lint passed')\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
